@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: deploy-example-k8s
+spec:
+  containers:
+    - name: deploy-example-k8s
+      image: examplekubernetes
+      imagePullPolicy: IfNotPresent
+      ports:
+        - name: example
+          containerPort: 80
